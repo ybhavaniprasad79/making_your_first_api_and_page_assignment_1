@@ -1,119 +1,95 @@
-Introduction
-The Virtual Assistant API is designed to provide users with personalized responses based on their input and the day of the week. This API acts as the foundation for a virtual assistant app, delivering a friendly greeting and a cheerful message to make the user's experience delightful.
+# **README for Virtual Assistant API**
 
-API Details
-Endpoint:
-GET /assistant/greet?name=<user_name>
+## **Introduction**
+The **Virtual Assistant API** is designed to provide users with personalized responses based on their input and the day of the week. This API acts as the foundation for a virtual assistant app, delivering a **friendly greeting** and a **cheerful message** to enhance the user's experience.
 
-Request Parameters:
+---
 
-name (required): The user's name, sent as a query parameter.
-Response Format:
-A JSON object containing:
+## **API Details**
 
-A personalized welcome message using the provided name.
-A cheerful message depending on the current day of the week.
+### **Endpoint**
+**GET** `/assistant/greet?name=<user_name>`
 
+### **Request Parameters**
+- **name (required)**: The user's name, sent as a query parameter.
 
-README for Virtual Assistant API
-Introduction
-The Virtual Assistant API is designed to provide users with personalized responses based on their input and the day of the week. This API acts as the foundation for a virtual assistant app, delivering a friendly greeting and a cheerful message to make the user's experience delightful.
+### **Response Format**
+A **JSON object** containing:
+1. A **personalized welcome message** using the provided name.
+2. A **cheerful message** depending on the current day of the week.
 
-API Details
-Endpoint:
-GET /assistant/greet?name=<user_name>
+---
 
-Request Parameters:
+## **Responses**
 
-name (required): The user's name, sent as a query parameter.
-Response Format:
-A JSON object containing:
-A personalized welcome message using the provided name.
-A cheerful message depending on the current day of the week.
-
-
-Responses
-For Monday:
+### **For Monday:**
+```json
 {
   "welcomeMessage": "Hello, John! Welcome to our assistant app!",
   "dayMessage": "Happy Monday! Start your week with energy!"
 }
+```
 
-For Friday:
+### **For Friday:**
+```json
 {
   "welcomeMessage": "Hello, John! Welcome to our assistant app!",
   "dayMessage": "It's Friday! The weekend is near!"
 }
+```
 
-For Other Days:
+### **For Other Days:**
+```json
 {
   "welcomeMessage": "Hello, John! Welcome to our assistant app!",
   "dayMessage": "Have a wonderful day!"
 }
+```
 
+---
 
-Here's the updated README file with all the instructions for forking, downloading, installing dependencies, solving the task, and submitting the GitHub repo link:
+## **How to Fork and Set Up Your Repository**
 
-README for Virtual Assistant API
-Introduction
-The Virtual Assistant API is designed to provide users with personalized responses based on their input and the day of the week. This API acts as the foundation for a virtual assistant app, delivering a friendly greeting and a cheerful message to make the user's experience delightful.
+### **1. Fork the Repository**
+- Go to the repository on GitHub and click the **Fork** button at the top right of the page.  
+  This will create a copy of the repository in your own GitHub account.
 
-API Details
-Endpoint:
-GET /assistant/greet?name=<user_name>
+### **2. Clone the Repository**
+- Once the repository is forked, click the **Clone** button and copy the link (HTTPS or SSH).
+- Open your terminal/command prompt and run:
+  ```bash
+  git clone <repository_url>
+  ```
+  Replace `<repository_url>` with the link you copied from your GitHub.
 
-Request Parameters:
+### **3. Install Dependencies**
+- Navigate to the cloned directory:
+  ```bash
+  cd <repository_folder>
+  ```
+- Install all necessary dependencies mentioned in the `package.json` file:
+  ```bash
+  npm install
+  ```
 
-name (required): The user's name, sent as a query parameter.
-Response Format:
-A JSON object containing:
+---
 
-A personalized welcome message using the provided name.
-A cheerful message depending on the current day of the week.
-Responses
-For Monday:
+## **Submission Instructions**
+1. After completing the task, commit and push your changes to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "Completed Virtual Assistant API task"
+   git push origin main
+   ```
+2. Submit the **GitHub repository link** on the assignment page.  
+   The link should follow this format:  
+   **`https://github.com/<your_username>/<repository_name>`**
 
-json
-Copy code
-{
-  "welcomeMessage": "Hello, John! Welcome to our assistant app!",
-  "dayMessage": "Happy Monday! Start your week with energy!"
-}
-For Friday:
+---
 
-json
-Copy code
-{
-  "welcomeMessage": "Hello, John! Welcome to our assistant app!",
-  "dayMessage": "It's Friday! The weekend is near!"
-}
-For Other Days:
+### **Example Submission**
+If your GitHub username is `johnDoe` and your repository is named `virtual-assistant-api`, the submission link would be:  
+**`https://github.com/johnDoe/virtual-assistant-api`**
 
-json
-Copy code
-{
-  "welcomeMessage": "Hello, John! Welcome to our assistant app!",
-  "dayMessage": "Have a wonderful day!"
-}
+---
 
-
-How to Fork and Set Up Your Repository
-
-Fork the Repository:-
-Go to the repository on GitHub and click the Fork button at the top right of the page. This will create a copy of the repository in your own GitHub account.
-
-Clone the Repository:-
-Once the repository is forked, click the Clone button and copy the link (HTTPS or SSH). Then, open your terminal/command prompt and run:
-git clone <repository_url>
-Replace <repository_url> with the link you copied from your GitHub.
-
-Install Dependencies:-
-Navigate to the cloned directory:
-cd <repository_folder>
-Run the following command to install all the necessary dependencies mentioned in the package.json file:
-npm install
-
-
-Submission Instructions
-Once you have committed and pushed your changes, submit the GitHub repository link on assignment page.
-The link should be in the format: https://github.com/<your_username>/<repository_name>
