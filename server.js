@@ -2,38 +2,47 @@
 const express = require('express');
 const app = express();
 
-/*
-Task:
-You need to build an API for a virtual assistant that provides customized responses.
+function message(){
 
-Requirements:
-1. Create a GET endpoint at "/assistant/greet".
-2. The endpoint should accept a "name" as a query parameter (e.g., /assistant/greet?name=John).
-3. The API should return a JSON response with:
-   a. A personalized greeting using the name provided.
-   b. A cheerful message based on the current day of the week.
+  let date =new Date()
+  let day =date.getDay()
 
-Example Responses:
-- For Monday:
-  {
-    "welcomeMessage": "Hello, John! Welcome to our assistant app!",
-    "dayMessage": "Happy Monday! Start your week with energy!"
+  if(day==1){
+    return {
+      "dayMessage": "Happy Monday! Start your week with energy!"
+    }
   }
-- For Friday:
-  {
-    "welcomeMessage": "Hello, John! Welcome to our assistant app!",
-    "dayMessage": "It's Friday! The weekend is near!"
+  else if(day==5){
+    return{
+      "dayMessage": "It's Friday! The weekend is near!"
+    }
   }
-- For other days:
-  {
-    "welcomeMessage": "Hello, John! Welcome to our assistant app!",
-    "dayMessage": "Have a wonderful day!"
+  else{
+    return{
+      "dayMessage": "Have a wonderful day!"
+    }
   }
+}
 
-Add the required logic below to complete the API.
-*/
+
+
+app.get("/assistant/greet",async(req,res)=>{
+   try {
+      let user =req.query.name
+      console.log(user)
+       let mess = message()
+       console.log(mess)
+      let welcomeMessage =`Hello, ${user} Welcome to our assistant app!`
+      mess.welcomeMessage =welcomeMessage
+      res.status(200).json(mess)
+    
+   } catch (error) {
+       res.status(500).json({status:false,message:"internal server error"})
+   }
+})
+
 
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Virtual Assistant API is running on http://localhost:${PORT}`);
+    console.log("Virtual Assistant API is running on http://localhost:3000");
 });
